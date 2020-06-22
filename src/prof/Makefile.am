@@ -15,4 +15,3 @@ libpspprofinclude_HEADERS = pspprof.h
 
 lib_LIBRARIES = libpspprof.a
 libpspprof_a_SOURCES = prof.c mcount.s
-libpspprof_a_LIBADD  = 

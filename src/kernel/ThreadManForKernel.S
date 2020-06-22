@@ -2,411 +2,139 @@
 
 #include "pspimport.s"
 
-#ifdef F_ThreadManForKernel_0000
-	IMPORT_START	"ThreadManForKernel",0x00010000
-#endif
-#ifdef F_ThreadManForKernel_0001
-	IMPORT_FUNC	"ThreadManForKernel",0x0C106E53,sceKernelRegisterThreadEventHandler
-#endif
-#ifdef F_ThreadManForKernel_0002
-	IMPORT_FUNC	"ThreadManForKernel",0x72F3C145,sceKernelReleaseThreadEventHandler
-#endif
-#ifdef F_ThreadManForKernel_0003
-	IMPORT_FUNC	"ThreadManForKernel",0x369EEB6B,sceKernelReferThreadEventHandlerStatus
-#endif
-#ifdef F_ThreadManForKernel_0004
-	IMPORT_FUNC	"ThreadManForKernel",0xE81CAF8F,sceKernelCreateCallback
-#endif
-#ifdef F_ThreadManForKernel_0005
-	IMPORT_FUNC	"ThreadManForKernel",0xEDBA5844,sceKernelDeleteCallback
-#endif
-#ifdef F_ThreadManForKernel_0006
-	IMPORT_FUNC	"ThreadManForKernel",0xC11BA8C4,sceKernelNotifyCallback
-#endif
-#ifdef F_ThreadManForKernel_0007
-	IMPORT_FUNC	"ThreadManForKernel",0xBA4051D6,sceKernelCancelCallback
-#endif
-#ifdef F_ThreadManForKernel_0008
-	IMPORT_FUNC	"ThreadManForKernel",0x2A3D44FF,sceKernelGetCallbackCount
-#endif
-#ifdef F_ThreadManForKernel_0009
-	IMPORT_FUNC	"ThreadManForKernel",0x349D6D6C,sceKernelCheckCallback
-#endif
-#ifdef F_ThreadManForKernel_0010
-	IMPORT_FUNC	"ThreadManForKernel",0x730ED8BC,sceKernelReferCallbackStatus
-#endif
-#ifdef F_ThreadManForKernel_0011
-	IMPORT_FUNC	"ThreadManForKernel",0x9ACE131E,sceKernelSleepThread
-#endif
-#ifdef F_ThreadManForKernel_0012
-	IMPORT_FUNC	"ThreadManForKernel",0x82826F70,sceKernelSleepThreadCB
-#endif
-#ifdef F_ThreadManForKernel_0013
-	IMPORT_FUNC	"ThreadManForKernel",0xD59EAD2F,sceKernelWakeupThread
-#endif
-#ifdef F_ThreadManForKernel_0014
-	IMPORT_FUNC	"ThreadManForKernel",0xFCCFAD26,sceKernelCancelWakeupThread
-#endif
-#ifdef F_ThreadManForKernel_0015
-	IMPORT_FUNC	"ThreadManForKernel",0x9944F31F,sceKernelSuspendThread
-#endif
-#ifdef F_ThreadManForKernel_0016
-	IMPORT_FUNC	"ThreadManForKernel",0x75156E8F,sceKernelResumeThread
-#endif
-#ifdef F_ThreadManForKernel_0017
-	IMPORT_FUNC	"ThreadManForKernel",0x8FD9F70C,sceKernelSuspendAllUserThreads
-#endif
-#ifdef F_ThreadManForKernel_0018
-	IMPORT_FUNC	"ThreadManForKernel",0x278C0DF5,sceKernelWaitThreadEnd
-#endif
-#ifdef F_ThreadManForKernel_0019
-	IMPORT_FUNC	"ThreadManForKernel",0x840E8133,sceKernelWaitThreadEndCB
-#endif
-#ifdef F_ThreadManForKernel_0020
-	IMPORT_FUNC	"ThreadManForKernel",0xCEADEB47,sceKernelDelayThread
-#endif
-#ifdef F_ThreadManForKernel_0021
-	IMPORT_FUNC	"ThreadManForKernel",0x68DA9E36,sceKernelDelayThreadCB
-#endif
-#ifdef F_ThreadManForKernel_0022
-	IMPORT_FUNC	"ThreadManForKernel",0xBD123D9E,sceKernelDelaySysClockThread
-#endif
-#ifdef F_ThreadManForKernel_0023
-	IMPORT_FUNC	"ThreadManForKernel",0x1181E963,sceKernelDelaySysClockThreadCB
-#endif
-#ifdef F_ThreadManForKernel_0024
-	IMPORT_FUNC	"ThreadManForKernel",0xD6DA4BA1,sceKernelCreateSema
-#endif
-#ifdef F_ThreadManForKernel_0025
-	IMPORT_FUNC	"ThreadManForKernel",0x28B6489C,sceKernelDeleteSema
-#endif
-#ifdef F_ThreadManForKernel_0026
-	IMPORT_FUNC	"ThreadManForKernel",0x3F53E640,sceKernelSignalSema
-#endif
-#ifdef F_ThreadManForKernel_0027
-	IMPORT_FUNC	"ThreadManForKernel",0x4E3A1105,sceKernelWaitSema
-#endif
-#ifdef F_ThreadManForKernel_0028
-	IMPORT_FUNC	"ThreadManForKernel",0x6D212BAC,sceKernelWaitSemaCB
-#endif
-#ifdef F_ThreadManForKernel_0029
-	IMPORT_FUNC	"ThreadManForKernel",0x58B1F937,sceKernelPollSema
-#endif
-#ifdef F_ThreadManForKernel_0030
-	IMPORT_FUNC	"ThreadManForKernel",0x8FFDF9A2,sceKernelCancelSema
-#endif
-#ifdef F_ThreadManForKernel_0031
-	IMPORT_FUNC	"ThreadManForKernel",0xBC6FEBC5,sceKernelReferSemaStatus
-#endif
-#ifdef F_ThreadManForKernel_0032
-	IMPORT_FUNC	"ThreadManForKernel",0x55C20A00,sceKernelCreateEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0033
-	IMPORT_FUNC	"ThreadManForKernel",0xEF9E4C70,sceKernelDeleteEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0034
-	IMPORT_FUNC	"ThreadManForKernel",0x1FB15A32,sceKernelSetEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0035
-	IMPORT_FUNC	"ThreadManForKernel",0x812346E4,sceKernelClearEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0036
-	IMPORT_FUNC	"ThreadManForKernel",0x402FCF22,sceKernelWaitEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0037
-	IMPORT_FUNC	"ThreadManForKernel",0x328C546A,sceKernelWaitEventFlagCB
-#endif
-#ifdef F_ThreadManForKernel_0038
-	IMPORT_FUNC	"ThreadManForKernel",0x30FD48F0,sceKernelPollEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0039
-	IMPORT_FUNC	"ThreadManForKernel",0xCD203292,sceKernelCancelEventFlag
-#endif
-#ifdef F_ThreadManForKernel_0040
-	IMPORT_FUNC	"ThreadManForKernel",0xA66B0120,sceKernelReferEventFlagStatus
-#endif
-#ifdef F_ThreadManForKernel_0041
-	IMPORT_FUNC	"ThreadManForKernel",0x8125221D,sceKernelCreateMbx
-#endif
-#ifdef F_ThreadManForKernel_0042
-	IMPORT_FUNC	"ThreadManForKernel",0x86255ADA,sceKernelDeleteMbx
-#endif
-#ifdef F_ThreadManForKernel_0043
-	IMPORT_FUNC	"ThreadManForKernel",0xE9B3061E,sceKernelSendMbx
-#endif
-#ifdef F_ThreadManForKernel_0044
-	IMPORT_FUNC	"ThreadManForKernel",0x18260574,sceKernelReceiveMbx
-#endif
-#ifdef F_ThreadManForKernel_0045
-	IMPORT_FUNC	"ThreadManForKernel",0xF3986382,sceKernelReceiveMbxCB
-#endif
-#ifdef F_ThreadManForKernel_0046
-	IMPORT_FUNC	"ThreadManForKernel",0x0D81716A,sceKernelPollMbx
-#endif
-#ifdef F_ThreadManForKernel_0047
-	IMPORT_FUNC	"ThreadManForKernel",0x87D4DD36,sceKernelCancelReceiveMbx
-#endif
-#ifdef F_ThreadManForKernel_0048
-	IMPORT_FUNC	"ThreadManForKernel",0xA8E8C846,sceKernelReferMbxStatus
-#endif
-#ifdef F_ThreadManForKernel_0049
-	IMPORT_FUNC	"ThreadManForKernel",0x7C0DC2A0,sceKernelCreateMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0050
-	IMPORT_FUNC	"ThreadManForKernel",0xF0B7DA1C,sceKernelDeleteMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0051
-	IMPORT_FUNC	"ThreadManForKernel",0x876DBFAD,sceKernelSendMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0052
-	IMPORT_FUNC	"ThreadManForKernel",0x7C41F2C2,sceKernelSendMsgPipeCB
-#endif
-#ifdef F_ThreadManForKernel_0053
-	IMPORT_FUNC	"ThreadManForKernel",0x884C9F90,sceKernelTrySendMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0054
-	IMPORT_FUNC	"ThreadManForKernel",0x74829B76,sceKernelReceiveMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0055
-	IMPORT_FUNC	"ThreadManForKernel",0xFBFA697D,sceKernelReceiveMsgPipeCB
-#endif
-#ifdef F_ThreadManForKernel_0056
-	IMPORT_FUNC	"ThreadManForKernel",0xDF52098F,sceKernelTryReceiveMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0057
-	IMPORT_FUNC	"ThreadManForKernel",0x349B864D,sceKernelCancelMsgPipe
-#endif
-#ifdef F_ThreadManForKernel_0058
-	IMPORT_FUNC	"ThreadManForKernel",0x33BE4024,sceKernelReferMsgPipeStatus
-#endif
-#ifdef F_ThreadManForKernel_0059
-	IMPORT_FUNC	"ThreadManForKernel",0x56C039B5,sceKernelCreateVpl
-#endif
-#ifdef F_ThreadManForKernel_0060
-	IMPORT_FUNC	"ThreadManForKernel",0x89B3D48C,sceKernelDeleteVpl
-#endif
-#ifdef F_ThreadManForKernel_0061
-	IMPORT_FUNC	"ThreadManForKernel",0xBED27435,sceKernelAllocateVpl
-#endif
-#ifdef F_ThreadManForKernel_0062
-	IMPORT_FUNC	"ThreadManForKernel",0xEC0A693F,sceKernelAllocateVplCB
-#endif
-#ifdef F_ThreadManForKernel_0063
-	IMPORT_FUNC	"ThreadManForKernel",0xAF36D708,sceKernelTryAllocateVpl
-#endif
-#ifdef F_ThreadManForKernel_0064
-	IMPORT_FUNC	"ThreadManForKernel",0xB736E9FF,sceKernelFreeVpl
-#endif
-#ifdef F_ThreadManForKernel_0065
-	IMPORT_FUNC	"ThreadManForKernel",0x1D371B8A,sceKernelCancelVpl
-#endif
-#ifdef F_ThreadManForKernel_0066
-	IMPORT_FUNC	"ThreadManForKernel",0x39810265,sceKernelReferVplStatus
-#endif
-#ifdef F_ThreadManForKernel_0067
-	IMPORT_FUNC	"ThreadManForKernel",0xC07BB470,sceKernelCreateFpl
-#endif
-#ifdef F_ThreadManForKernel_0068
-	IMPORT_FUNC	"ThreadManForKernel",0xED1410E0,sceKernelDeleteFpl
-#endif
-#ifdef F_ThreadManForKernel_0069
-	IMPORT_FUNC	"ThreadManForKernel",0xD979E9BF,sceKernelAllocateFpl
-#endif
-#ifdef F_ThreadManForKernel_0070
-	IMPORT_FUNC	"ThreadManForKernel",0xE7282CB6,sceKernelAllocateFplCB
-#endif
-#ifdef F_ThreadManForKernel_0071
-	IMPORT_FUNC	"ThreadManForKernel",0x623AE665,sceKernelTryAllocateFpl
-#endif
-#ifdef F_ThreadManForKernel_0072
-	IMPORT_FUNC	"ThreadManForKernel",0xF6414A71,sceKernelFreeFpl
-#endif
-#ifdef F_ThreadManForKernel_0073
-	IMPORT_FUNC	"ThreadManForKernel",0xA8AA591F,sceKernelCancelFpl
-#endif
-#ifdef F_ThreadManForKernel_0074
-	IMPORT_FUNC	"ThreadManForKernel",0xD8199E4C,sceKernelReferFplStatus
-#endif
-#ifdef F_ThreadManForKernel_0075
-	IMPORT_FUNC	"ThreadManForKernel",0x110DEC9A,sceKernelUSec2SysClock
-#endif
-#ifdef F_ThreadManForKernel_0076
-	IMPORT_FUNC	"ThreadManForKernel",0xC8CD158C,sceKernelUSec2SysClockWide
-#endif
-#ifdef F_ThreadManForKernel_0077
-	IMPORT_FUNC	"ThreadManForKernel",0xBA6B92E2,sceKernelSysClock2USec
-#endif
-#ifdef F_ThreadManForKernel_0078
-	IMPORT_FUNC	"ThreadManForKernel",0xE1619D7C,sceKernelSysClock2USecWide
-#endif
-#ifdef F_ThreadManForKernel_0079
-	IMPORT_FUNC	"ThreadManForKernel",0xDB738F35,sceKernelGetSystemTime
-#endif
-#ifdef F_ThreadManForKernel_0080
-	IMPORT_FUNC	"ThreadManForKernel",0x82BC5777,sceKernelGetSystemTimeWide
-#endif
-#ifdef F_ThreadManForKernel_0081
-	IMPORT_FUNC	"ThreadManForKernel",0x369ED59D,sceKernelGetSystemTimeLow
-#endif
-#ifdef F_ThreadManForKernel_0082
-	IMPORT_FUNC	"ThreadManForKernel",0x6652B8CA,sceKernelSetAlarm
-#endif
-#ifdef F_ThreadManForKernel_0083
-	IMPORT_FUNC	"ThreadManForKernel",0xB2C25152,sceKernelSetSysClockAlarm
-#endif
-#ifdef F_ThreadManForKernel_0084
-	IMPORT_FUNC	"ThreadManForKernel",0x7E65B999,sceKernelCancelAlarm
-#endif
-#ifdef F_ThreadManForKernel_0085
-	IMPORT_FUNC	"ThreadManForKernel",0xDAA3F564,sceKernelReferAlarmStatus
-#endif
-#ifdef F_ThreadManForKernel_0086
-	IMPORT_FUNC	"ThreadManForKernel",0x20FFF560,sceKernelCreateVTimer
-#endif
-#ifdef F_ThreadManForKernel_0087
-	IMPORT_FUNC	"ThreadManForKernel",0x328F9E52,sceKernelDeleteVTimer
-#endif
-#ifdef F_ThreadManForKernel_0088
-	IMPORT_FUNC	"ThreadManForKernel",0xB3A59970,sceKernelGetVTimerBase
-#endif
-#ifdef F_ThreadManForKernel_0089
-	IMPORT_FUNC	"ThreadManForKernel",0xB7C18B77,sceKernelGetVTimerBaseWide
-#endif
-#ifdef F_ThreadManForKernel_0090
-	IMPORT_FUNC	"ThreadManForKernel",0x034A921F,sceKernelGetVTimerTime
-#endif
-#ifdef F_ThreadManForKernel_0091
-	IMPORT_FUNC	"ThreadManForKernel",0xC0B3FFD2,sceKernelGetVTimerTimeWide
-#endif
-#ifdef F_ThreadManForKernel_0092
-	IMPORT_FUNC	"ThreadManForKernel",0x542AD630,sceKernelSetVTimerTime
-#endif
-#ifdef F_ThreadManForKernel_0093
-	IMPORT_FUNC	"ThreadManForKernel",0xFB6425C3,sceKernelSetVTimerTimeWide
-#endif
-#ifdef F_ThreadManForKernel_0094
-	IMPORT_FUNC	"ThreadManForKernel",0xC68D9437,sceKernelStartVTimer
-#endif
-#ifdef F_ThreadManForKernel_0095
-	IMPORT_FUNC	"ThreadManForKernel",0xD0AEEE87,sceKernelStopVTimer
-#endif
-#ifdef F_ThreadManForKernel_0096
-	IMPORT_FUNC	"ThreadManForKernel",0xD8B299AE,sceKernelSetVTimerHandler
-#endif
-#ifdef F_ThreadManForKernel_0097
-	IMPORT_FUNC	"ThreadManForKernel",0x53B00E9A,sceKernelSetVTimerHandlerWide
-#endif
-#ifdef F_ThreadManForKernel_0098
-	IMPORT_FUNC	"ThreadManForKernel",0xD2D615EF,sceKernelCancelVTimerHandler
-#endif
-#ifdef F_ThreadManForKernel_0099
-	IMPORT_FUNC	"ThreadManForKernel",0x5F32BEAA,sceKernelReferVTimerStatus
-#endif
-#ifdef F_ThreadManForKernel_0100
-	IMPORT_FUNC	"ThreadManForKernel",0x04E72261,sceKernelAllocateKTLS
-#endif
-#ifdef F_ThreadManForKernel_0101
-	IMPORT_FUNC	"ThreadManForKernel",0xD198B811,sceKernelFreeKTLS
-#endif
-#ifdef F_ThreadManForKernel_0102
-	IMPORT_FUNC	"ThreadManForKernel",0x3AD875C3,sceKernelGetThreadKTLS
-#endif
-#ifdef F_ThreadManForKernel_0103
-	IMPORT_FUNC	"ThreadManForKernel",0xA249EAAE,sceKernelGetKTLS
-#endif
-#ifdef F_ThreadManForKernel_0104
-	IMPORT_FUNC	"ThreadManForKernel",0xB50F4E46,ThreadManForKernel_B50F4E46
-#endif
-#ifdef F_ThreadManForKernel_0105
-	IMPORT_FUNC	"ThreadManForKernel",0x446D8DE6,sceKernelCreateThread
-#endif
-#ifdef F_ThreadManForKernel_0106
-	IMPORT_FUNC	"ThreadManForKernel",0x9FA03CD3,sceKernelDeleteThread
-#endif
-#ifdef F_ThreadManForKernel_0107
-	IMPORT_FUNC	"ThreadManForKernel",0xF475845D,sceKernelStartThread
-#endif
-#ifdef F_ThreadManForKernel_0108
-	IMPORT_FUNC	"ThreadManForKernel",0xAA73C935,sceKernelExitThread
-#endif
-#ifdef F_ThreadManForKernel_0109
-	IMPORT_FUNC	"ThreadManForKernel",0x809CE29B,sceKernelExitDeleteThread
-#endif
-#ifdef F_ThreadManForKernel_0110
-	IMPORT_FUNC	"ThreadManForKernel",0x616403BA,sceKernelTerminateThread
-#endif
-#ifdef F_ThreadManForKernel_0111
-	IMPORT_FUNC	"ThreadManForKernel",0x383F7BCC,sceKernelTerminateDeleteThread
-#endif
-#ifdef F_ThreadManForKernel_0112
-	IMPORT_FUNC	"ThreadManForKernel",0x3AD58B8C,sceKernelSuspendDispatchThread
-#endif
-#ifdef F_ThreadManForKernel_0113
-	IMPORT_FUNC	"ThreadManForKernel",0x27E22EC2,sceKernelResumeDispatchThread
-#endif
-#ifdef F_ThreadManForKernel_0114
-	IMPORT_FUNC	"ThreadManForKernel",0xEA748E31,sceKernelChangeCurrentThreadAttr
-#endif
-#ifdef F_ThreadManForKernel_0115
-	IMPORT_FUNC	"ThreadManForKernel",0x71BC9871,sceKernelChangeThreadPriority
-#endif
-#ifdef F_ThreadManForKernel_0116
-	IMPORT_FUNC	"ThreadManForKernel",0x912354A7,sceKernelRotateThreadReadyQueue
-#endif
-#ifdef F_ThreadManForKernel_0117
-	IMPORT_FUNC	"ThreadManForKernel",0x2C34E053,sceKernelReleaseWaitThread
-#endif
-#ifdef F_ThreadManForKernel_0118
-	IMPORT_FUNC	"ThreadManForKernel",0x293B45B8,sceKernelGetThreadId
-#endif
-#ifdef F_ThreadManForKernel_0119
-	IMPORT_FUNC	"ThreadManForKernel",0x94AA61EE,sceKernelGetThreadCurrentPriority
-#endif
-#ifdef F_ThreadManForKernel_0120
-	IMPORT_FUNC	"ThreadManForKernel",0x3B183E26,sceKernelGetThreadExitStatus
-#endif
-#ifdef F_ThreadManForKernel_0121
-	IMPORT_FUNC	"ThreadManForKernel",0xF6427665,sceKernelGetUserLevel
-#endif
-#ifdef F_ThreadManForKernel_0122
-	IMPORT_FUNC	"ThreadManForKernel",0x85A2A5BF,sceKernelIsUserModeThread
-#endif
-#ifdef F_ThreadManForKernel_0123
-	IMPORT_FUNC	"ThreadManForKernel",0xDD55A192,sceKernelGetSyscallRA
-#endif
-#ifdef F_ThreadManForKernel_0124
-	IMPORT_FUNC	"ThreadManForKernel",0xBC31C1B9,sceKernelExtendKernelStack
-#endif
-#ifdef F_ThreadManForKernel_0125
-	IMPORT_FUNC	"ThreadManForKernel",0x4FE44D5E,sceKernelCheckThreadKernelStack
-#endif
-#ifdef F_ThreadManForKernel_0126
-	IMPORT_FUNC	"ThreadManForKernel",0xD13BDE95,sceKernelCheckThreadStack
-#endif
-#ifdef F_ThreadManForKernel_0127
-	IMPORT_FUNC	"ThreadManForKernel",0x52089CA1,sceKernelGetThreadStackFreeSize
-#endif
-#ifdef F_ThreadManForKernel_0128
-	IMPORT_FUNC	"ThreadManForKernel",0xD890B370,sceKernelGetThreadKernelStackFreeSize
-#endif
-#ifdef F_ThreadManForKernel_0129
-	IMPORT_FUNC	"ThreadManForKernel",0x17C1684E,sceKernelReferThreadStatus
-#endif
-#ifdef F_ThreadManForKernel_0130
-	IMPORT_FUNC	"ThreadManForKernel",0xFFC36A14,sceKernelReferThreadRunStatus
-#endif
-#ifdef F_ThreadManForKernel_0131
-	IMPORT_FUNC	"ThreadManForKernel",0x2D69D086,ThreadManForKernel_2D69D086
-#endif
-#ifdef F_ThreadManForKernel_0132
-	IMPORT_FUNC	"ThreadManForKernel",0xFCB5EB49,sceKernelGetSystemStatusFlag
-#endif
-#ifdef F_ThreadManForKernel_0133
-	IMPORT_FUNC	"ThreadManForKernel",0x627E6F3A,sceKernelReferSystemStatus
-#endif
-#ifdef F_ThreadManForKernel_0134
-	IMPORT_FUNC	"ThreadManForKernel",0x94416130,sceKernelGetThreadmanIdList
-#endif
-#ifdef F_ThreadManForKernel_0135
-	IMPORT_FUNC	"ThreadManForKernel",0x57CF62DD,sceKernelGetThreadmanIdType
-#endif
+IMPORT_START	"ThreadManForKernel",0x00010000
+IMPORT_FUNC	"ThreadManForKernel",0x0C106E53,sceKernelRegisterThreadEventHandler
+IMPORT_FUNC	"ThreadManForKernel",0x72F3C145,sceKernelReleaseThreadEventHandler
+IMPORT_FUNC	"ThreadManForKernel",0x369EEB6B,sceKernelReferThreadEventHandlerStatus
+IMPORT_FUNC	"ThreadManForKernel",0xE81CAF8F,sceKernelCreateCallback
+IMPORT_FUNC	"ThreadManForKernel",0xEDBA5844,sceKernelDeleteCallback
+IMPORT_FUNC	"ThreadManForKernel",0xC11BA8C4,sceKernelNotifyCallback
+IMPORT_FUNC	"ThreadManForKernel",0xBA4051D6,sceKernelCancelCallback
+IMPORT_FUNC	"ThreadManForKernel",0x2A3D44FF,sceKernelGetCallbackCount
+IMPORT_FUNC	"ThreadManForKernel",0x349D6D6C,sceKernelCheckCallback
+IMPORT_FUNC	"ThreadManForKernel",0x730ED8BC,sceKernelReferCallbackStatus
+IMPORT_FUNC	"ThreadManForKernel",0x9ACE131E,sceKernelSleepThread
+IMPORT_FUNC	"ThreadManForKernel",0x82826F70,sceKernelSleepThreadCB
+IMPORT_FUNC	"ThreadManForKernel",0xD59EAD2F,sceKernelWakeupThread
+IMPORT_FUNC	"ThreadManForKernel",0xFCCFAD26,sceKernelCancelWakeupThread
+IMPORT_FUNC	"ThreadManForKernel",0x9944F31F,sceKernelSuspendThread
+IMPORT_FUNC	"ThreadManForKernel",0x75156E8F,sceKernelResumeThread
+IMPORT_FUNC	"ThreadManForKernel",0x8FD9F70C,sceKernelSuspendAllUserThreads
+IMPORT_FUNC	"ThreadManForKernel",0x278C0DF5,sceKernelWaitThreadEnd
+IMPORT_FUNC	"ThreadManForKernel",0x840E8133,sceKernelWaitThreadEndCB
+IMPORT_FUNC	"ThreadManForKernel",0xCEADEB47,sceKernelDelayThread
+IMPORT_FUNC	"ThreadManForKernel",0x68DA9E36,sceKernelDelayThreadCB
+IMPORT_FUNC	"ThreadManForKernel",0xBD123D9E,sceKernelDelaySysClockThread
+IMPORT_FUNC	"ThreadManForKernel",0x1181E963,sceKernelDelaySysClockThreadCB
+IMPORT_FUNC	"ThreadManForKernel",0xD6DA4BA1,sceKernelCreateSema
+IMPORT_FUNC	"ThreadManForKernel",0x28B6489C,sceKernelDeleteSema
+IMPORT_FUNC	"ThreadManForKernel",0x3F53E640,sceKernelSignalSema
+IMPORT_FUNC	"ThreadManForKernel",0x4E3A1105,sceKernelWaitSema
+IMPORT_FUNC	"ThreadManForKernel",0x6D212BAC,sceKernelWaitSemaCB
+IMPORT_FUNC	"ThreadManForKernel",0x58B1F937,sceKernelPollSema
+IMPORT_FUNC	"ThreadManForKernel",0x8FFDF9A2,sceKernelCancelSema
+IMPORT_FUNC	"ThreadManForKernel",0xBC6FEBC5,sceKernelReferSemaStatus
+IMPORT_FUNC	"ThreadManForKernel",0x55C20A00,sceKernelCreateEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0xEF9E4C70,sceKernelDeleteEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0x1FB15A32,sceKernelSetEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0x812346E4,sceKernelClearEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0x402FCF22,sceKernelWaitEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0x328C546A,sceKernelWaitEventFlagCB
+IMPORT_FUNC	"ThreadManForKernel",0x30FD48F0,sceKernelPollEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0xCD203292,sceKernelCancelEventFlag
+IMPORT_FUNC	"ThreadManForKernel",0xA66B0120,sceKernelReferEventFlagStatus
+IMPORT_FUNC	"ThreadManForKernel",0x8125221D,sceKernelCreateMbx
+IMPORT_FUNC	"ThreadManForKernel",0x86255ADA,sceKernelDeleteMbx
+IMPORT_FUNC	"ThreadManForKernel",0xE9B3061E,sceKernelSendMbx
+IMPORT_FUNC	"ThreadManForKernel",0x18260574,sceKernelReceiveMbx
+IMPORT_FUNC	"ThreadManForKernel",0xF3986382,sceKernelReceiveMbxCB
+IMPORT_FUNC	"ThreadManForKernel",0x0D81716A,sceKernelPollMbx
+IMPORT_FUNC	"ThreadManForKernel",0x87D4DD36,sceKernelCancelReceiveMbx
+IMPORT_FUNC	"ThreadManForKernel",0xA8E8C846,sceKernelReferMbxStatus
+IMPORT_FUNC	"ThreadManForKernel",0x7C0DC2A0,sceKernelCreateMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0xF0B7DA1C,sceKernelDeleteMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0x876DBFAD,sceKernelSendMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0x7C41F2C2,sceKernelSendMsgPipeCB
+IMPORT_FUNC	"ThreadManForKernel",0x884C9F90,sceKernelTrySendMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0x74829B76,sceKernelReceiveMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0xFBFA697D,sceKernelReceiveMsgPipeCB
+IMPORT_FUNC	"ThreadManForKernel",0xDF52098F,sceKernelTryReceiveMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0x349B864D,sceKernelCancelMsgPipe
+IMPORT_FUNC	"ThreadManForKernel",0x33BE4024,sceKernelReferMsgPipeStatus
+IMPORT_FUNC	"ThreadManForKernel",0x56C039B5,sceKernelCreateVpl
+IMPORT_FUNC	"ThreadManForKernel",0x89B3D48C,sceKernelDeleteVpl
+IMPORT_FUNC	"ThreadManForKernel",0xBED27435,sceKernelAllocateVpl
+IMPORT_FUNC	"ThreadManForKernel",0xEC0A693F,sceKernelAllocateVplCB
+IMPORT_FUNC	"ThreadManForKernel",0xAF36D708,sceKernelTryAllocateVpl
+IMPORT_FUNC	"ThreadManForKernel",0xB736E9FF,sceKernelFreeVpl
+IMPORT_FUNC	"ThreadManForKernel",0x1D371B8A,sceKernelCancelVpl
+IMPORT_FUNC	"ThreadManForKernel",0x39810265,sceKernelReferVplStatus
+IMPORT_FUNC	"ThreadManForKernel",0xC07BB470,sceKernelCreateFpl
+IMPORT_FUNC	"ThreadManForKernel",0xED1410E0,sceKernelDeleteFpl
+IMPORT_FUNC	"ThreadManForKernel",0xD979E9BF,sceKernelAllocateFpl
+IMPORT_FUNC	"ThreadManForKernel",0xE7282CB6,sceKernelAllocateFplCB
+IMPORT_FUNC	"ThreadManForKernel",0x623AE665,sceKernelTryAllocateFpl
+IMPORT_FUNC	"ThreadManForKernel",0xF6414A71,sceKernelFreeFpl
+IMPORT_FUNC	"ThreadManForKernel",0xA8AA591F,sceKernelCancelFpl
+IMPORT_FUNC	"ThreadManForKernel",0xD8199E4C,sceKernelReferFplStatus
+IMPORT_FUNC	"ThreadManForKernel",0x110DEC9A,sceKernelUSec2SysClock
+IMPORT_FUNC	"ThreadManForKernel",0xC8CD158C,sceKernelUSec2SysClockWide
+IMPORT_FUNC	"ThreadManForKernel",0xBA6B92E2,sceKernelSysClock2USec
+IMPORT_FUNC	"ThreadManForKernel",0xE1619D7C,sceKernelSysClock2USecWide
+IMPORT_FUNC	"ThreadManForKernel",0xDB738F35,sceKernelGetSystemTime
+IMPORT_FUNC	"ThreadManForKernel",0x82BC5777,sceKernelGetSystemTimeWide
+IMPORT_FUNC	"ThreadManForKernel",0x369ED59D,sceKernelGetSystemTimeLow
+IMPORT_FUNC	"ThreadManForKernel",0x6652B8CA,sceKernelSetAlarm
+IMPORT_FUNC	"ThreadManForKernel",0xB2C25152,sceKernelSetSysClockAlarm
+IMPORT_FUNC	"ThreadManForKernel",0x7E65B999,sceKernelCancelAlarm
+IMPORT_FUNC	"ThreadManForKernel",0xDAA3F564,sceKernelReferAlarmStatus
+IMPORT_FUNC	"ThreadManForKernel",0x20FFF560,sceKernelCreateVTimer
+IMPORT_FUNC	"ThreadManForKernel",0x328F9E52,sceKernelDeleteVTimer
+IMPORT_FUNC	"ThreadManForKernel",0xB3A59970,sceKernelGetVTimerBase
+IMPORT_FUNC	"ThreadManForKernel",0xB7C18B77,sceKernelGetVTimerBaseWide
+IMPORT_FUNC	"ThreadManForKernel",0x034A921F,sceKernelGetVTimerTime
+IMPORT_FUNC	"ThreadManForKernel",0xC0B3FFD2,sceKernelGetVTimerTimeWide
+IMPORT_FUNC	"ThreadManForKernel",0x542AD630,sceKernelSetVTimerTime
+IMPORT_FUNC	"ThreadManForKernel",0xFB6425C3,sceKernelSetVTimerTimeWide
+IMPORT_FUNC	"ThreadManForKernel",0xC68D9437,sceKernelStartVTimer
+IMPORT_FUNC	"ThreadManForKernel",0xD0AEEE87,sceKernelStopVTimer
+IMPORT_FUNC	"ThreadManForKernel",0xD8B299AE,sceKernelSetVTimerHandler
+IMPORT_FUNC	"ThreadManForKernel",0x53B00E9A,sceKernelSetVTimerHandlerWide
+IMPORT_FUNC	"ThreadManForKernel",0xD2D615EF,sceKernelCancelVTimerHandler
+IMPORT_FUNC	"ThreadManForKernel",0x5F32BEAA,sceKernelReferVTimerStatus
+IMPORT_FUNC	"ThreadManForKernel",0x04E72261,sceKernelAllocateKTLS
+IMPORT_FUNC	"ThreadManForKernel",0xD198B811,sceKernelFreeKTLS
+IMPORT_FUNC	"ThreadManForKernel",0x3AD875C3,sceKernelGetThreadKTLS
+IMPORT_FUNC	"ThreadManForKernel",0xA249EAAE,sceKernelGetKTLS
+IMPORT_FUNC	"ThreadManForKernel",0xB50F4E46,ThreadManForKernel_B50F4E46
+IMPORT_FUNC	"ThreadManForKernel",0x446D8DE6,sceKernelCreateThread
+IMPORT_FUNC	"ThreadManForKernel",0x9FA03CD3,sceKernelDeleteThread
+IMPORT_FUNC	"ThreadManForKernel",0xF475845D,sceKernelStartThread
+IMPORT_FUNC	"ThreadManForKernel",0xAA73C935,sceKernelExitThread
+IMPORT_FUNC	"ThreadManForKernel",0x809CE29B,sceKernelExitDeleteThread
+IMPORT_FUNC	"ThreadManForKernel",0x616403BA,sceKernelTerminateThread
+IMPORT_FUNC	"ThreadManForKernel",0x383F7BCC,sceKernelTerminateDeleteThread
+IMPORT_FUNC	"ThreadManForKernel",0x3AD58B8C,sceKernelSuspendDispatchThread
+IMPORT_FUNC	"ThreadManForKernel",0x27E22EC2,sceKernelResumeDispatchThread
+IMPORT_FUNC	"ThreadManForKernel",0xEA748E31,sceKernelChangeCurrentThreadAttr
+IMPORT_FUNC	"ThreadManForKernel",0x71BC9871,sceKernelChangeThreadPriority
+IMPORT_FUNC	"ThreadManForKernel",0x912354A7,sceKernelRotateThreadReadyQueue
+IMPORT_FUNC	"ThreadManForKernel",0x2C34E053,sceKernelReleaseWaitThread
+IMPORT_FUNC	"ThreadManForKernel",0x293B45B8,sceKernelGetThreadId
+IMPORT_FUNC	"ThreadManForKernel",0x94AA61EE,sceKernelGetThreadCurrentPriority
+IMPORT_FUNC	"ThreadManForKernel",0x3B183E26,sceKernelGetThreadExitStatus
+IMPORT_FUNC	"ThreadManForKernel",0xF6427665,sceKernelGetUserLevel
+IMPORT_FUNC	"ThreadManForKernel",0x85A2A5BF,sceKernelIsUserModeThread
+IMPORT_FUNC	"ThreadManForKernel",0xDD55A192,sceKernelGetSyscallRA
+IMPORT_FUNC	"ThreadManForKernel",0xBC31C1B9,sceKernelExtendKernelStack
+IMPORT_FUNC	"ThreadManForKernel",0x4FE44D5E,sceKernelCheckThreadKernelStack
+IMPORT_FUNC	"ThreadManForKernel",0xD13BDE95,sceKernelCheckThreadStack
+IMPORT_FUNC	"ThreadManForKernel",0x52089CA1,sceKernelGetThreadStackFreeSize
+IMPORT_FUNC	"ThreadManForKernel",0xD890B370,sceKernelGetThreadKernelStackFreeSize
+IMPORT_FUNC	"ThreadManForKernel",0x17C1684E,sceKernelReferThreadStatus
+IMPORT_FUNC	"ThreadManForKernel",0xFFC36A14,sceKernelReferThreadRunStatus
+IMPORT_FUNC	"ThreadManForKernel",0x2D69D086,ThreadManForKernel_2D69D086
+IMPORT_FUNC	"ThreadManForKernel",0xFCB5EB49,sceKernelGetSystemStatusFlag
+IMPORT_FUNC	"ThreadManForKernel",0x627E6F3A,sceKernelReferSystemStatus
+IMPORT_FUNC	"ThreadManForKernel",0x94416130,sceKernelGetThreadmanIdList
+IMPORT_FUNC	"ThreadManForKernel",0x57CF62DD,sceKernelGetThreadmanIdType
